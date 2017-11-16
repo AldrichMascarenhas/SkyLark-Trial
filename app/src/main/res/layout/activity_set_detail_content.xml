@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/default_margin">
+
+
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/text_view_activity_set_detail_content_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Title" />
+
+        <TextView
+            android:id="@+id/text_view_activity_set_detail_content_film_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="24" />
+
+        <TextView
+            android:textStyle="italic"
+            android:id="@+id/text_view_activity_set_detail_content_quote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quote" />
+
+        <TextView
+            android:textStyle="bold|italic"
+            android:id="@+id/text_view_activity_set_detail_content_summary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Summary" />
+
+        <TextView
+            android:id="@+id/text_view_activity_set_detail_content_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Body" />
+    </LinearLayout>
+
+
+</ScrollView>
