@@ -11,19 +11,19 @@ import retrofit2.Call;
  * Created by Aldrich on 14-Nov-17.
  */
 
-public interface SetDataSource {
+interface SetDataSource {
 
 
     //Get from Local
-    RealmResults<SetObject> getSetFromDatabase();
+    fun getSetFromDatabase(): RealmResults<SetObject>
 
     //Get Remote
-    Call<SetResponse> getSetFromRemote();
+    fun getSetFromRemote(): Call<SetResponse>
 
-    void addsetObject(SetObject setObject);
+    fun addsetObject(setObject: SetObject)
 
-    void updateSetObjectFavouriteStatus(String uid, boolean value);
+    fun updateSetObjectFavouriteStatus(uid: String, value: Boolean)
 
-    Call<ImageResponse> imageResponseCall(String s);
+    fun imageResponseCall(s: String): Call<ImageResponse>
 
 }
