@@ -26,6 +26,4 @@ open class SetObject(
         @SerializedName("image_urls") @Expose var imageUrls: RealmList<String>? = null,
         @SerializedName("summary") @Expose var summary: String? = "",
         @SerializedName("film_count") @Expose var filmCount: Int = 0
-) : RealmObject() {
-    var isFavourite: Boolean = false
-}
+) : RealmObject()
