@@ -6,18 +6,10 @@ import com.nerdcutlet.skylarktest.ui.sets.model.SetDataSource;
 import com.nerdcutlet.skylarktest.ui.sets.model.local.SetObject;
 import com.nerdcutlet.skylarktest.ui.sets.model.local.SetResponse;
 
-import java.util.List;
-import java.util.Set;
-
 import javax.inject.Inject;
 
-import io.reactivex.Maybe;
-import io.reactivex.Observable;
-import io.reactivex.Single;
 import io.realm.RealmResults;
 import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 /**
  * Created by Aldrich on 14-Nov-17.
@@ -58,9 +50,5 @@ public class SetRemoteDataSource implements SetDataSource {
        return skylarkServerInterface.getImage(s);
     }
 
-    @Override
-    public void updateSetTempImage(String uid, String image_url) {
-        throw new UnsupportedOperationException();
 
-    }
 }

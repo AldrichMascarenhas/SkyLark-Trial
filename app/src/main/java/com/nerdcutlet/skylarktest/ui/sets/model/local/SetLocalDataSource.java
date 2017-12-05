@@ -3,23 +3,17 @@ package com.nerdcutlet.skylarktest.ui.sets.model.local;
 import com.nerdcutlet.skylarktest.ui.setdetail.model.remote.ImageResponse;
 import com.nerdcutlet.skylarktest.ui.sets.model.SetDataSource;
 
-import java.util.List;
-import java.util.Set;
-
 import javax.inject.Inject;
 
-import io.reactivex.Maybe;
-import io.reactivex.Single;
 import io.realm.Realm;
 import io.realm.RealmResults;
 import retrofit2.Call;
-import retrofit2.Response;
 
 /**
  * Created by Aldrich on 14-Nov-17.
  */
 
-public class SetLocalDataSource implements SetDataSource {
+public class  SetLocalDataSource implements SetDataSource {
 
     private final Realm realm;
 
@@ -86,20 +80,7 @@ public class SetLocalDataSource implements SetDataSource {
 
     }
 
-    @Override
-    public void updateSetTempImage(String uid, String image_url) {
-        SetObject setObject = realm.where(SetObject.class)
-                .equalTo("uid", uid)
-                .findFirst();
-        realm.beginTransaction();
 
-        if (setObject == null) {
-            //TODO: Throw error
-        } else {
-            setObject.setImage_temporary(image_url);
-        }
-        realm.commitTransaction();
-    }
 
     @Override
     public Call<ImageResponse> imageResponseCall(String s) {
