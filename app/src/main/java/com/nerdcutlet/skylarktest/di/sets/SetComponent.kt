@@ -12,10 +12,10 @@ import dagger.Component;
 
 @ActivityScope
 @Component(
-        dependencies = {AppComponent.class},
-        modules = {SetModule.class}
+        dependencies = arrayOf(AppComponent::class),
+        modules = arrayOf(SetModule::class)
 )
-public interface SetComponent {
+interface SetComponent {
 
-    void inject(SetActivity setActivity);
+    fun inject(setActivity: SetActivity)
 }

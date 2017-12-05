@@ -12,17 +12,9 @@ import dagger.Provides;
  * Created by Aldrich on 14-Nov-17.
  */
 @Module
-public class AppModule {
-
-    private final Context context;
-
-    public AppModule(Context context) {
-        this.context = context;
-    }
+class AppModule(private val context : Context) {
 
     @Provides
-    Context provideContext() {
-        return context;
-    }
+    fun provideContext() = context
 
 }
